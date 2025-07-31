@@ -1,6 +1,5 @@
 
 
-
 import string
 
 
@@ -21,6 +20,7 @@ print(codice)
 
 decifrata= "".join(chr(c^57) for c in codice)
 print(decifrata)
+
 
 
 
