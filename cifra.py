@@ -33,25 +33,5 @@ cifrato= pow(mi, e, decimale)
 print(cifrato)
 
 
-d=    "174fb7ff8de2f30966fedb435dbcff" +\
-    "d6916809cc2b90efb523e5b0154e0b" +\
-    "8fcd7ba83f5b014da77cc0bc3d258e" +\
-    "ff18df8f16089682f6a8508b7d4290" +\
-    "ec4e67d347891b8775a5e111757c79" +\
-    "c9cdbbad6c085fb7e7a3e60e0b87ab" +\
-    "02b6b26475b69bcd06e18e03414d52" +\
-    "dbc261977577e78bcaf945ef80c0c3" +\
-    "c3f9c8a142b0141efefb2ee80bbb2e" +\
-    "ef628b638d29b6f13270cddcfea1d0" +\
-    "4c1263e91854a351b968aee658c4da" +\
-    "b9f86d8ad8ac98aae7bddfaf57fcf7" +\
-    "621aff564474ef7fd0b73819cb116e" +\
-    "5345aacd23a519bdf40b2cefa9a8be" +\
-    "bf23a15c6cc1d637ac93693d306273" +\
-    "b795d1e6e822ed2271d8b7ae6cd00d" +\
-    "9c7b4e210fe34724c6a201caae7542" +\
-    "c3" 
 
-
-decimale= int(d, 16)
 
