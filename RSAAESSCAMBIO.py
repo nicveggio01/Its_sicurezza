@@ -1,4 +1,4 @@
-from Crypto.Cipher import AES
+from Cryptodome.Cipher import AES
 import base64
 
 # --- Modulo RSA (pubblico di Domenico) ---
@@ -28,31 +28,31 @@ modulo="""00:c1:c5:a4:c4:e6:f6:7a:d5:3e:b6:4a:3c:c2:77:
 modulo = modulo.replace(":", "").replace("\n", "").replace(" ", "")
 modulo = int(modulo, 16)
 
-# --- Esponente pubblico RSA ---
+# Esponente pubblico RSA 
 e = 3
 
-# --- Messaggio in chiaro ---
+# Messaggio in chiaro 
 plain_text = int("bomba sull'allianz stadium".encode("utf-8").hex(), 16)
 
-# --- Cifratura RSA ---
+#  Cifratura RSA 
 cifrato_rsa = pow(plain_text, e, modulo)
 
-# --- Funzione di padding per AES ---
+# Funzione di padding per AES 
 def pad(text):
     while len(text) % 16 != 0:
         text += " "
     return text
 
-# --- Funzione AES ENCRYPT ---
+#  Funzione AES ENCRYPT 
 def encrypt(plain_text, key):
     cipher = AES.new(pad(key).encode("utf-8"), AES.MODE_ECB)
     encrypted_text = cipher.encrypt(pad(plain_text).encode("utf-8"))
     return base64.b64encode(encrypted_text).decode("utf-8")
 
-# --- Chiave AES condivisa ---
+# Chiave AES condivisa
 key = "niccodomeits0501"  # 16 caratteri
 
-# --- Cifro il risultato RSA con AES ---
+# Cifro il risultato RSA con AES 
 cifrato_aes = encrypt(str(cifrato_rsa), key)
 
 with open("mess.txt", "w") as f:

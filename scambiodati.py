@@ -9,7 +9,7 @@ g=5
 a=11 #numero segreto Alice 
 b=8 #numero segreto di Bob 
 
-r= g**a %     #risultato di Alice
+r= g**a %  p   #risultato di Alice
 
 print(r)
 #A da il risultato a B e B da il risultato a A

@@ -1,4 +1,4 @@
-from Crypto.Cipher import AES
+from Cryptodome.Cipher import AES
 import base64
 
 modulo = """00:dc:29:f2:f6:3a:73:6a:77:1d:f2:de:d0:e3:84:
